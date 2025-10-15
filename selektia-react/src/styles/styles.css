@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* contenedor principal para que el footer quede al fondo */
+main {
+  flex: 1;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+  background: linear-gradient(to right, #9b59b6, #3498db);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #000;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+nav a {
+  background: #000;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background: #333;
+}
+
+/* ------------------ HERO ------------------ */
+.hero {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero-images {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-images img {
+  width: 45%;
+  max-width: 350px;
+  border-radius: 6px;
+}
+
+/* ------------------ NOSOTROS ------------------ */
+.nosotros {
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.nosotros-text {
+  width: 50%;
+  min-width: 280px;
+  padding: 10px;
+}
+
+.nosotros-img {
+  position: relative;
+  width: 45%;
+  min-width: 280px;
+}
+
+.nosotros-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.vertical-text {
+  position: absolute;
+  right: -20px;
+  bottom: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0.3;
+}
+
+/* ------------------ OFERTA ------------------ */
+#oferta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#oferta h2 {
+  margin-bottom: 10px;
+}
+
+#oferta p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#oferta .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+#oferta .item {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#oferta .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#oferta .item img {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+#oferta .item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+/* ------------------ CLIENTES ------------------ */
+.clientes {
+  margin-top: 40px;
+  text-align: center;
+  padding: 40px 20px;
+  background: #000000;
+  color: #fff;
+}
+
+.clientes h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.clientes .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.clientes img {
+  height: 120px; /* más grandes */
+  max-width: 200px;
+  object-fit: contain; /* asegura que no se deformen */
+  transition: transform 0.3s ease;
+}
+
+.clientes img:hover {
+  transform: scale(1.1);
+}
+
+
+/* ------------------ CONTACTO ------------------ */
+#contacto {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-grid img {
+  width: 40%;
+  min-width: 250px;
+  border-radius: 6px;
+  max-width: 400px;
+}
+
+.contact-grid form {
+  background: #f3cce3;
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.contact-grid label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.contact-grid input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.contact-grid button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.contact-grid button:hover {
+  background: #333;
+}
+
+/* ------------------ MENSAJES FORMULARIO ------------------ */
+.form-message {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  background: linear-gradient(to right, #9b59b6, #3498db);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* empuja el footer al fondo */
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+  .nosotros {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-text,
+  .nosotros-img {
+    width: 100%;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-grid img,
+  .contact-grid form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .clientes .logos {
+    gap: 20px;
+  }
+}
